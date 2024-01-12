@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='fluid-container d-flex flex-column align-items-center'>
+      <section id='editor' className='card'>
+        <div className='header d-flex justify-content-between'>
+          <div className='left-side-header d-flex align-items-center'>
+            <i className='fa-brands fa-free-code-camp'></i>
+            <h3 className='ms-2 mb-1'>Editor</h3>
+          </div>
+          <div className='right-side-header'>
+            <i className='fa-solid fa-maximize font-weight-light'></i>
+          </div>
+        </div>
+        <div className='body'></div>
+      </section>
+      <section id='previewer' className='card'>
+        <div className='header d-flex justify-content-between'>
+          <div className='left-side-header d-flex align-items-center'>
+            <i className='fa-brands fa-free-code-camp'></i>
+            <h3 className='ms-2 mb-1'>Previewer</h3>
+          </div>
+          <div className='right-side-header'>
+            <i className='fa-solid fa-maximize font-weight-light'></i>
+          </div>
+        </div>
+        <div className='body'></div>
+      </section>
     </div>
   );
 }
