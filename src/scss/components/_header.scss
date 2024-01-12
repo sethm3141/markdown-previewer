@@ -1,4 +1,11 @@
+@use '../custom' as *;
+
 .header {
-  font-size: 1.6rem !important;
-  padding: 0 1rem;
+  background-color: $primary;
+  font-size: 1.1rem !important;
+  padding: 0.25rem 1rem;
+
+  h3 {
+    font-size: inherit;
+  }
 }
