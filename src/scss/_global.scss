@@ -1,3 +1,39 @@
+@use './custom' as *;
+
 * {
   box-sizing: border-box;
+  border: 1px solid red;
+}
+
+html,
+#root {
+  background-color: $secondary;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  /* For Chrome and Safari */
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $foreground-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  /* For Firefox */
+  scrollbar-color: $foreground-color $background-color;
+  scrollbar-width: thin;
 }

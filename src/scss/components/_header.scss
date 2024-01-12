@@ -1,6 +1,7 @@
 @use '../custom' as *;
 
-.header {
+.editor-header,
+.previewer-header {
   background-color: $primary;
   font-size: 1.1rem !important;
   padding: 0.25rem 1rem;

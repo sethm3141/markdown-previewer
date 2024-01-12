@@ -3,12 +3,13 @@
 
 // import components
 @use './components/header';
+@use './components/body';
 @use './components/card';
 @use './components/textarea';
 
 // import sections
-@use './sections/editor';
-@use './sections/previewer';
+@use './sections/editor-card';
+@use './sections/previewer-card';
 
 // import testing
 @use './testing/app';
