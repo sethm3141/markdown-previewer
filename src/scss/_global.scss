@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 html,
@@ -19,18 +19,25 @@ html,
 
   &::-webkit-scrollbar-thumb {
     background-color: $foreground-color;
-
-    &:hover {
-      cursor: pointer;
-    }
+    border-radius: $size;
   }
 
   &::-webkit-scrollbar-track {
     background-color: $background-color;
+    margin: 2px 0 0 0;
+  }
 
-    &:hover {
-      cursor: pointer;
-    }
+  &::-webkit-scrollbar-corner {
+    background-color: $background-color;
+  }
+
+  &::-webkit-resizer {
+    background-color: $foreground-color;
+    border-top: 2px $background-color solid;
+    border-bottom: 2px $background-color solid;
+    border-right: 0 $background-color solid;
+    border-left: 4px $background-color solid;
+    border-radius: $size*4 $size/3 $size/10 $size/2;
   }
 
   /* For Firefox */

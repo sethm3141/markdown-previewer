@@ -11857,7 +11857,6 @@ textarea.form-control-lg {
 }
 * {
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 html,
@@ -11877,7 +11876,9 @@ html,
 }
 
 .editor-body {
-  height: 200px;
+  display: flex;
+  padding-right: 2px;
+  background-color: hsl(180, 40%, 80%);
 }
 
 .card {
@@ -11888,6 +11889,7 @@ html,
 }
 
 textarea#editor {
+  cursor: default;
   font-size: 0.85rem;
   font-family: "Fira Code", monospace;
   line-height: 1.1rem;
@@ -11898,10 +11900,37 @@ textarea#editor {
   background-color: hsl(180, 40%, 80%);
   border: 0;
   padding: 0 0.25rem;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: scroll;
   outline: none;
   white-space: pre-wrap;
+  /* For Chrome and Safari */
+  /* For Firefox */
+  scrollbar-color: hsl(180, 50%, 50%) hsl(180, 40%, 80%);
+  scrollbar-width: thin;
+}
+textarea#editor::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+textarea#editor::-webkit-scrollbar-thumb {
+  background-color: hsl(180, 50%, 50%);
+  border-radius: 10px;
+}
+textarea#editor::-webkit-scrollbar-track {
+  background-color: hsl(180, 40%, 80%);
+  margin: 2px 0 0 0;
+}
+textarea#editor::-webkit-scrollbar-corner {
+  background-color: hsl(180, 40%, 80%);
+}
+textarea#editor::-webkit-resizer {
+  background-color: hsl(180, 50%, 50%);
+  border-top: 2px hsl(180, 40%, 80%) solid;
+  border-bottom: 2px hsl(180, 40%, 80%) solid;
+  border-right: 0 hsl(180, 40%, 80%) solid;
+  border-left: 4px hsl(180, 40%, 80%) solid;
+  border-radius: 40px 3.3333333333px 1px 5px;
 }
 
 #editor-card {

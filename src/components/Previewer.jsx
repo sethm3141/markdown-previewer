@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Previewer = () => {
   return (
@@ -12,7 +12,7 @@ const Previewer = () => {
           <i className='fa-solid fa-maximize font-weight-light'></i>
         </div>
       </div>
-      <div className='previewer-body'></div>
+      <div className='previewer-body fluid-container'></div>
     </section>
   );
 };
