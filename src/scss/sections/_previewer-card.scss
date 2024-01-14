@@ -1,3 +1,9 @@
+@use '../custom' as *;
+
 #previewer-card {
   width: 800px;
+
+  @include media-breakpoint-down(lg) {
+    width: 75vw;
+  }
 }

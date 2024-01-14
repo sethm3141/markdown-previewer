@@ -11869,10 +11869,15 @@ html,
   background-color: hsl(180, 50%, 50%);
   font-size: 1.1rem !important;
   padding: 0.25rem 1rem;
+  border-bottom: 1px solid black;
 }
 .editor-header h3,
 .previewer-header h3 {
   font-size: inherit;
+}
+.editor-header .right-side-header:hover,
+.previewer-header .right-side-header:hover {
+  cursor: pointer;
 }
 
 .editor-body {
@@ -11946,7 +11951,6 @@ textarea#editor {
   background-color: hsl(180, 40%, 80%);
   border: 0;
   padding: 0 0.25rem;
-  overflow-x: auto;
   overflow-y: scroll;
   outline: none;
   /* For Chrome and Safari */
@@ -11981,57 +11985,19 @@ textarea#editor::-webkit-resizer {
 #editor-card {
   width: 500px;
 }
+@media (max-width: 991.98px) {
+  #editor-card {
+    width: 50vw;
+  }
+}
 
 #previewer-card {
   width: 800px;
 }
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 991.98px) {
+  #previewer-card {
+    width: 75vw;
   }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /*# sourceMappingURL=index.css.map */

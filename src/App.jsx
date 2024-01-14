@@ -9,15 +9,27 @@ const DEFAULT_MD_TEXT =
 function App() {
   const [editorInput, setEditorInput] = useState(DEFAULT_MD_TEXT);
   const [previewerOutput, setPreviewerOutput] = useState({ __html: '' });
+  const [editorIsFull, setEditorIsFull] = useState(false);
+  const [previewerIsFull, setPreviewerIsFull] = useState(false);
 
   return (
     <div className='fluid-container d-flex flex-column align-items-center'>
-      <Editor
-        editorInput={editorInput}
-        setEditorInput={setEditorInput}
-        setPreviewerOutput={setPreviewerOutput}
-      />
-      <Previewer previewerOutput={previewerOutput} />
+      {!previewerIsFull && (
+        <Editor
+          editorInput={editorInput}
+          setEditorInput={setEditorInput}
+          setPreviewerOutput={setPreviewerOutput}
+          editorIsFull={editorIsFull}
+          setEditorIsFull={setEditorIsFull}
+        />
+      )}
+      {!editorIsFull && (
+        <Previewer
+          previewerOutput={previewerOutput}
+          previewerIsFull={previewerIsFull}
+          setPreviewerIsFull={setPreviewerIsFull}
+        />
+      )}
     </div>
   );
 }

@@ -5,8 +5,13 @@
   background-color: $primary;
   font-size: 1.1rem !important;
   padding: 0.25rem 1rem;
+  border-bottom: 1px solid black;
 
   h3 {
     font-size: inherit;
+  }
+
+  .right-side-header:hover {
+    cursor: pointer;
   }
 }
