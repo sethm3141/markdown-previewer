@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const Previewer = () => {
+const Previewer = ({ previewerOutput }) => {
   return (
     <section id='previewer-card' className='card'>
       <div className='previewer-header d-flex justify-content-between'>
@@ -12,7 +12,11 @@ const Previewer = () => {
           <i className='fa-solid fa-maximize font-weight-light'></i>
         </div>
       </div>
-      <div className='previewer-body fluid-container'></div>
+      <div
+        className='previewer-body fluid-container'
+        id='previewer-output'
+        dangerouslySetInnerHTML={previewerOutput}
+      ></div>
     </section>
   );
 };

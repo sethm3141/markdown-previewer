@@ -20,7 +20,7 @@ textarea#editor {
   outline: none;
 
   //? This should let the textarea see carriage returns
-  white-space: pre-wrap;
+  // white-space: pre-wrap;
 
   @include scrollbars(10px, $primary, $third);
 }

@@ -2,6 +2,61 @@
 
 .editor-body {
   display: flex;
+  padding-top: 0.25rem;
   padding-right: 2px;
   background-color: $third;
+}
+
+.previewer-body {
+  padding: 1.25rem 1rem 0.25rem 1rem;
+  background-color: $third;
+
+  & img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  & p code,
+  pre {
+    background-color: white;
+    padding-left: 0.2rem;
+    padding-right: 0.3rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+  }
+
+  & table {
+    // @extend .table;
+
+    & * {
+      outline: 1px solid black;
+      padding: 0.1rem 0.4rem;
+    }
+  }
+
+  & h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & blockquote {
+    margin-left: 1rem;
+    padding-left: 0.3rem;
+    // border-left: 3px solid hsl(0, 0%, 30%);
+    border-left: 3px solid $primary;
+  }
 }
