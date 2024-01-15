@@ -34,7 +34,32 @@ const Editor = ({
   }, [editorIsFull]);
 
   useEffect(() => {
-    const html = marked.parse(editorInput, 'javascript');
+    // const html = new Marked()
+    //   .use(
+    //     markedCodeFormat({
+    //       // Prettier options
+    //       // plugins: prettierPlugins
+    //       parser: 'markdown',
+    //       plugins: prettier,
+    //     })
+    //   )
+    //   .parse(
+    //     editorInput
+    //     // ,'javascript'
+    //     // {language: 'javascript'}
+    //   );
+    const tokens = marked.lexer(editorInput);
+    console.log(tokens);
+
+    tokens.forEach((element) => {
+      if (element.type == 'code') {
+        console.log('i saw one!');
+        element = { ...element, lang: 'language-javascript' };
+      }
+    });
+    console.log(tokens);
+
+    const html = marked.parser(tokens);
     const cleanHTML = DOMPurify.sanitize(html);
     setPreviewerOutput({ __html: cleanHTML });
   }, [editorInput]);

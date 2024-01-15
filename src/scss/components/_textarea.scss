@@ -22,5 +22,5 @@ textarea#editor {
   //? This should let the textarea see carriage returns
   // white-space: pre-wrap;
 
-  @include scrollbars(10px, $primary, $third, $fourth, 0, 0);
+  @include scrollbars(10px, $primary, $third, $fourth, 2px, 0);
 }
