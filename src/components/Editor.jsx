@@ -75,6 +75,7 @@ const Editor = ({
           value={editorInput}
           onChange={(event) => setEditorInput(event.target.value)}
         ></textarea>
+        <div className="scroll-bar-space"></div>
       </div>
     </section>
   );

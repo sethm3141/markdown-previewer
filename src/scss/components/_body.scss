@@ -2,6 +2,7 @@
 
 .editor-body {
   display: flex;
+  flex-direction: row;
   padding-top: 0.25rem;
   padding-right: 2px;
   background-color: $third;
@@ -26,7 +27,6 @@
   }
 
   & table {
-    // @extend .table;
 
     & * {
       outline: 1px solid black;

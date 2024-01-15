@@ -1,0 +1,6 @@
+@use '../custom' as *;
+@use '../global' as *;
+
+html {
+  @include scrollbars(35px, $fourth, $secondary, $third, 0px, 9px);
+}

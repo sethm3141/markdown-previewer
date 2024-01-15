@@ -2,7 +2,7 @@
 @use '../custom' as *;
 
 textarea#editor {
-  cursor: default;
+  cursor: auto;
 
   font-size: 0.85rem;
   font-family: 'Fira Code', monospace;
@@ -14,6 +14,7 @@ textarea#editor {
   background-color: $third;
   border: 0;
   padding: 0 0.25rem;
+  // z-index: 10;
 
   overflow-y: scroll;
   outline: none;
@@ -21,5 +22,5 @@ textarea#editor {
   //? This should let the textarea see carriage returns
   // white-space: pre-wrap;
 
-  @include scrollbars(10px, $primary, $third);
+  @include scrollbars(10px, $primary, $third, $fourth, 0, 0);
 }
