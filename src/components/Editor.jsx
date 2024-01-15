@@ -34,7 +34,7 @@ const Editor = ({
   }, [editorIsFull]);
 
   useEffect(() => {
-    const html = marked.parse(editorInput);
+    const html = marked.parse(editorInput, 'javascript');
     const cleanHTML = DOMPurify.sanitize(html);
     setPreviewerOutput({ __html: cleanHTML });
   }, [editorInput]);
@@ -75,7 +75,7 @@ const Editor = ({
           value={editorInput}
           onChange={(event) => setEditorInput(event.target.value)}
         ></textarea>
-        <div className="scroll-bar-space"></div>
+        <div className='scroll-bar-space'></div>
       </div>
     </section>
   );
