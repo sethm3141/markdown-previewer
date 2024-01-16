@@ -11962,6 +11962,7 @@ textarea#editor {
   padding: 0 0.25rem;
   overflow-y: scroll;
   outline: none;
+  white-space: break-spaces;
   /* For Chrome and Safari */
   /* For Firefox */
   scrollbar-color: hsl(180, 50%, 50%) hsl(180, 40%, 80%);

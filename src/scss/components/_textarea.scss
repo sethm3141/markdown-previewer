@@ -18,5 +18,7 @@ textarea#editor {
   overflow-y: scroll;
   outline: none;
 
+  white-space: break-spaces;
+
   @include scrollbars(10px, $primary, $third, $fourth, 2px, 0);
 }

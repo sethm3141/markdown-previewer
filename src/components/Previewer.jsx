@@ -39,7 +39,7 @@ const Previewer = ({
       </div>
       <div
         className='previewer-body fluid-container'
-        id='previewer-output'
+        id='preview'
         dangerouslySetInnerHTML={previewerOutput}
       ></div>
     </section>
