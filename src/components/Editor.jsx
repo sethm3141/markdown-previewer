@@ -20,46 +20,15 @@ const Editor = ({
   useLayoutEffect(() => {
     if (editorIsFull) {
       textareaRef.current.style.height = 'inherit';
-
       textareaRef.current.style.height = '90vh';
-      // textareaRef.current.style.height = `${Math.max(
-      //   textareaRef.current.scrollHeight,
-      //   MIN_TEXTAREA_HEIGHT
-      // )}px`;
     } else {
       textareaRef.current.style.height = 'inherit';
-
       textareaRef.current.style.height = MIN_TEXTAREA_HEIGHT;
     }
   }, [editorIsFull]);
 
   useEffect(() => {
-    // const html = new Marked()
-    //   .use(
-    //     markedCodeFormat({
-    //       // Prettier options
-    //       // plugins: prettierPlugins
-    //       parser: 'markdown',
-    //       plugins: prettier,
-    //     })
-    //   )
-    //   .parse(
-    //     editorInput
-    //     // ,'javascript'
-    //     // {language: 'javascript'}
-    //   );
-    const tokens = marked.lexer(editorInput);
-    console.log(tokens);
-
-    tokens.forEach((element) => {
-      if (element.type == 'code') {
-        console.log('i saw one!');
-        element = { ...element, lang: 'language-javascript' };
-      }
-    });
-    console.log(tokens);
-
-    const html = marked.parser(tokens);
+    const html = marked.parse(editorInput);
     const cleanHTML = DOMPurify.sanitize(html);
     setPreviewerOutput({ __html: cleanHTML });
   }, [editorInput]);

@@ -3,7 +3,6 @@
 .editor-body {
   display: flex;
   flex-direction: row;
-  // padding-top: 0.25rem;
   padding-right: 2px;
   background-color: $third;
 }
@@ -15,6 +14,12 @@
   & img {
     width: 100%;
     margin-top: 1rem;
+  }
+
+  & p code {
+    color: black;
+    font-weight: bolder;
+    font-size: calc(1em + 0.5px);
   }
 
   & p code,
@@ -55,7 +60,6 @@
   & blockquote {
     margin-left: 1rem;
     padding-left: 0.3rem;
-    // border-left: 3px solid hsl(0, 0%, 30%);
     border-left: 3px solid $primary;
   }
 }

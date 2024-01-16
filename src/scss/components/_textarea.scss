@@ -14,13 +14,9 @@ textarea#editor {
   background-color: $third;
   border: 0;
   padding: 0 0.25rem;
-  // z-index: 10;
 
   overflow-y: scroll;
   outline: none;
-
-  //? This should let the textarea see carriage returns
-  // white-space: pre-wrap;
 
   @include scrollbars(10px, $primary, $third, $fourth, 2px, 0);
 }

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+pre code.hljs {
+  padding: 0.2rem !important;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11894,6 +11898,11 @@ html,
 .previewer-body img {
   width: 100%;
   margin-top: 1rem;
+}
+.previewer-body p code {
+  color: black;
+  font-weight: bolder;
+  font-size: calc(1em + 0.5px);
 }
 .previewer-body p code,
 .previewer-body pre {
